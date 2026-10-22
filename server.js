@@ -84,6 +84,7 @@ async function getCatalog() {
 }
 
 async function fetchCatalogFromVendor() {
+  loadLocalEnvironment();
   const apiKey = process.env.WRK_KEY;
   if (!apiKey) {
     const error = new Error("API key belum diatur.");
@@ -175,6 +176,10 @@ function serveStaticFile(requestPath, response) {
   }
 
   const relativePath = decodedPath === "/" ? "index.html" : decodedPath.replace(/^\/+/, "");
+  if (relativePath.split(/[\\/]/).some((segment) => segment.startsWith("."))) {
+    response.writeHead(404).end("Not found");
+    return;
+  }
   const filePath = path.resolve(projectRoot, relativePath);
   if (filePath !== projectRoot && !filePath.startsWith(`${projectRoot}${path.sep}`)) {
     response.writeHead(403).end("Forbidden");

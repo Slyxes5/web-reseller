@@ -1,11 +1,11 @@
 # Toko reseller produk digital
 
-Folder ini menampung perencanaan dan pengembangan website toko milik reseller yang menjual produk dari Waroengkuy melalui jalur reseller resmi.
+Folder ini menampung website TStore, toko digital milik reseller yang dirancang untuk memakai jalur resmi Waroengkuy.
 
 - `PRD.md` — tujuan produk, pengguna, alur, kebutuhan MVP, kriteria penerimaan, dan hal yang harus dipastikan sebelum implementasi.
 - `AGENTS.md` — batas kerja dan aturan keamanan proyek.
 
-Nama folder ini hanya penanda workspace. Merek toko, domain, teknologi, pembayaran, produk awal, dan mekanisme pemenuhan pesanan belum diputuskan. Pastikan akses reseller, hak jual ulang, dokumentasi API, dan metode pembayaran resmi tersedia sebelum integrasi dibuat. Website harus menggunakan identitas visual sendiri dan tidak menyalin kode, teks, atau aset Waroengkuy.
+TStore saat ini berupa prototipe dengan katalog snapshot dan pratinjau katalog API baca-saja di server lokal. Akses reseller pengguna masih menunggu persetujuan; belum ada pemesanan, pembayaran, atau fulfillment. Pastikan hak jual ulang tiap SKU, aturan garansi, dan konfigurasi pembayaran resmi tersedia sebelum fitur transaksi dibuat. Website menggunakan identitas visual sendiri dan tidak menyalin kode, teks, atau aset Waroengkuy.
 
 ## Local catalog API preview
 

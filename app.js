@@ -262,7 +262,7 @@ async function loadApiCatalog() {
     filterProducts();
   } catch {
     apiStatus.hidden = false;
-    apiStatus.textContent = "Server katalog lokal belum berjalan. Data snapshot tetap ditampilkan.";
+    apiStatus.textContent = "Jalankan node server.js dan buka http://127.0.0.1:3000 untuk mencoba katalog API. Data snapshot tetap ditampilkan.";
   }
 }
 
