@@ -3,138 +3,192 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f5f3ee" />
-    <meta name="description" content="Prototipe toko digital. Katalog dan harga pada halaman ini masih berupa contoh." />
-    <title>TStore — Toko Digital</title>
+    <meta name="theme-color" content="#f4f3ea" />
+    <meta name="description" content="Jelajahi referensi katalog digital TStore. Harga dan ketersediaan toko akan ditambahkan setelah akses reseller disetujui." />
+    <title>TStore | Katalog digital</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
     <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="demo-banner"><span class="demo-dot"></span> PROTOTIPE DEMO <span class="banner-divider">·</span> <span id="demo-banner-copy">Produk, harga, dan status di halaman ini hanya contoh</span></div>
+    <a class="skip-link" href="#konten">Lewati ke katalog</a>
+    <div class="notice-bar" role="status">
+      <span class="notice-mark" aria-hidden="true"></span>
+      <span>Pratinjau katalog</span>
+      <span class="notice-separator" aria-hidden="true">/</span>
+      <span id="demo-banner-copy">Harga dan stok TStore belum aktif. Pengajuan reseller masih menunggu persetujuan.</span>
+    </div>
+
     <header class="site-header">
       <a class="brand" href="#beranda" aria-label="TStore, beranda">
-        <img class="brand-mark" src="assets/logos/tstore.svg" alt="" aria-hidden="true" />
+        <img class="brand-mark" src="assets/logos/tstore.svg" alt="" aria-hidden="true" width="40" height="40" />
         <span class="brand-name">TStore</span>
       </a>
       <nav class="main-nav" aria-label="Navigasi utama">
-        <a class="nav-link active" href="#beranda">Beranda</a>
+        <a class="nav-link" href="#populer">Sering dibeli</a>
         <a class="nav-link" href="#katalog">Katalog</a>
-        <a class="nav-link" href="#cara-kerja">Cara kerja</a>
+        <a class="nav-link" href="#status">Status toko</a>
       </nav>
-      <a class="help-link" href="#dukungan"><span class="help-icon">?</span> Bantuan</a>
+      <a class="header-action" href="#katalog">Lihat produk <span aria-hidden="true">↘</span></a>
     </header>
 
-    <main id="beranda">
-      <section class="hero shell" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-line"></span> SERBA DIGITAL, LEBIH PRAKTIS</div>
-          <h1 id="hero-title">Kebutuhan digital,<br /><span>semudah beberapa klik.</span></h1>
-          <p class="hero-description">Temukan pilihan produk digital di satu tempat. Pilih yang sesuai, cek detailnya, lalu lanjutkan dengan nyaman.</p>
-          <a class="primary-button" href="#katalog">Jelajahi katalog <span aria-hidden="true">↗</span></a>
-          <div class="hero-note"><span class="note-icon">i</span> Ini tampilan demo. Belum menerima pesanan atau pembayaran.</div>
+    <main id="konten">
+      <section class="hero section-wrap" id="beranda" aria-labelledby="hero-title">
+        <div class="hero-copy" data-reveal="copy">
+          <h1 id="hero-title">Katalog digital</h1>
+          <p class="hero-description">Lihat produk digital dan detail katalog sumber. TStore belum menerima pesanan sampai akses reseller disetujui.</p>
+          <a class="primary-button" href="#katalog">Jelajahi katalog <span aria-hidden="true">↘</span></a>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-          <div class="art-card card-back"><span class="art-chip chip-mint">DIGITAL</span><span class="card-back-shape"></span></div>
-          <div class="art-card card-front"><div class="card-topline"><span class="art-chip chip-orange">PRAKTIS</span><span class="sparkle">✳</span></div><div class="card-symbol">↗</div><div class="card-caption">Kebutuhanmu,<br /><b>siap dijelajahi.</b></div><div class="card-bottom"><span>ETALASE DIGITAL</span><span>01 / 04</span></div></div>
-          <div class="float-tag tag-top">✦ <span>Pilihan digital</span></div><div class="float-tag tag-bottom"><span class="tag-check">✓</span><span>Alur yang jelas</span></div>
+        <div class="hero-art" aria-hidden="true" data-reveal="visual">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-card card-back"><span class="art-chip chip-mint">TStore</span><span class="card-back-shape"></span></div>
+          <div class="art-card card-front">
+            <div class="card-topline"><span class="art-chip chip-orange">Contoh produk</span></div>
+            <div class="hero-logo-grid" aria-label="Spotify, YouTube, Canva, dan Gemini">
+              <img src="assets/logos/spotify.svg" alt="" aria-hidden="true" width="40" height="40" />
+              <img src="assets/logos/youtube.svg" alt="" aria-hidden="true" width="40" height="40" />
+              <img class="hero-logo-canva" src="assets/logos/canva.svg" alt="" aria-hidden="true" width="80" height="40" />
+              <img src="assets/logos/gemini.svg" alt="" aria-hidden="true" width="40" height="40" />
+            </div>
+            <div class="card-caption">Streaming,<br /><b>desain & AI.</b></div>
+          </div>
+          <div class="float-tag tag-top"><span class="tag-star" aria-hidden="true"></span><span>APK premium</span></div>
+          <div class="float-tag tag-bottom"><span class="tag-check" aria-hidden="true"></span><span>VPN · E-wallet · Pulsa</span></div>
           <div class="art-sun"></div>
         </div>
       </section>
 
-      <section class="popular-section shell" aria-labelledby="popular-title">
-        <div class="popular-heading">
-          <div><div class="eyebrow"><span class="eyebrow-line"></span> PILIHAN PRODUK</div><h2 id="popular-title">Sering dibeli</h2></div>
-          <p>Snapshot katalog publik Waroengkuy per 23 Okt 2026, bukan harga reseller atau data penjualan TStore. SKU tetap menunggu konfirmasi izin jual.</p>
+      <section class="popular-section section-wrap" id="populer" aria-labelledby="popular-title">
+        <div class="section-heading popular-heading" data-reveal="heading">
+          <div>
+            <h2 id="popular-title">Sering dibeli</h2>
+          </div>
+          <p class="section-intro">Contoh produk dengan riwayat penjualan di katalog sumber. Angka dan harga ini bukan data transaksi atau harga TStore.</p>
         </div>
         <div class="popular-grid">
-          <article class="popular-card" data-public-product="spotify">
-            <div class="popular-art popular-spotify"><img class="popular-brand-logo" src="assets/logos/spotify.svg" alt="" aria-hidden="true" /><span class="popular-art-label">MUSIK · PREMIUM</span></div>
-            <div class="popular-info"><div><h3>Spotify Premium</h3><p>Stok publik habis · akun dari toko</p><span class="public-sales">Tidak diaktifkan di TStore</span></div><button class="detail-button" type="button" aria-label="Detail referensi Spotify Premium" data-demo-detail>↗</button></div>
+          <article class="popular-card" data-public-product="spotify" data-reveal="item">
+            <div class="popular-art popular-spotify"><img class="popular-brand-logo" src="assets/logos/spotify.svg" alt="" aria-hidden="true" width="80" height="80" loading="lazy" /><span class="popular-art-label">Musik</span></div>
+            <div class="popular-info"><div><h3>Spotify Premium</h3><p>Stok publik habis · akun dari toko</p><span class="public-sales">Tidak diaktifkan di TStore</span></div><button class="detail-button" type="button" aria-label="Buka detail referensi Spotify Premium" data-demo-detail>↗</button></div>
           </article>
-          <article class="popular-card" data-public-product="youtube">
-            <div class="popular-art popular-youtube"><img class="popular-brand-logo" src="assets/logos/youtube.svg" alt="" aria-hidden="true" /><span class="popular-art-label">VIDEO · PREMIUM</span></div>
-            <div class="popular-info"><div><h3>YouTube Premium</h3><p>1 bulan · Rp10.000</p><span class="public-sales">Publik: tersedia · 189 terjual</span></div><button class="detail-button" type="button" aria-label="Detail referensi YouTube Premium" data-demo-detail>↗</button></div>
+          <article class="popular-card" data-public-product="youtube" data-reveal="item">
+            <div class="popular-art popular-youtube"><img class="popular-brand-logo" src="assets/logos/youtube.svg" alt="" aria-hidden="true" width="80" height="80" loading="lazy" /><span class="popular-art-label">Video</span></div>
+            <div class="popular-info"><div><h3>YouTube Premium</h3><p>Varian 1 bulan tercatat di sumber</p><span class="public-sales">189 terjual di katalog publik</span></div><button class="detail-button" type="button" aria-label="Buka detail referensi YouTube Premium" data-demo-detail>↗</button></div>
           </article>
-          <article class="popular-card" data-public-product="gemini">
-            <div class="popular-art popular-gemini"><img class="popular-brand-logo" src="assets/logos/gemini.svg" alt="" aria-hidden="true" /><span class="popular-art-label">AI · PRODUKTIVITAS</span></div>
-            <div class="popular-info"><div><h3>Google Gemini</h3><p>18 bulan link · Rp75.000</p><span class="public-sales">Publik: tercantum tersedia · 192 terjual</span></div><button class="detail-button" type="button" aria-label="Detail referensi Google Gemini" data-demo-detail>↗</button></div>
+          <article class="popular-card" data-public-product="gemini" data-reveal="item">
+            <div class="popular-art popular-gemini"><img class="popular-brand-logo" src="assets/logos/gemini.svg" alt="" aria-hidden="true" width="80" height="80" loading="lazy" /><span class="popular-art-label">AI</span></div>
+            <div class="popular-info"><div><h3>Google Gemini</h3><p>Link redeem 18 bulan di sumber</p><span class="public-sales">192 terjual di katalog publik</span></div><button class="detail-button" type="button" aria-label="Buka detail referensi Google Gemini" data-demo-detail>↗</button></div>
           </article>
-          <article class="popular-card" data-public-product="canva">
-            <div class="popular-art popular-canva"><img class="popular-brand-logo" src="assets/logos/canva.svg" alt="" aria-hidden="true" /><span class="popular-art-label">DESAIN · KREATIF</span></div>
-            <div class="popular-info"><div><h3>Canva</h3><p>1 bulan Rp10.000 · 1 tahun Rp50.000</p><span class="public-sales">Publik: tersedia · 149 terjual</span></div><button class="detail-button" type="button" aria-label="Detail referensi Canva" data-demo-detail>↗</button></div>
+          <article class="popular-card" data-public-product="canva" data-reveal="item">
+            <div class="popular-art popular-canva"><img class="popular-brand-logo" src="assets/logos/canva.svg" alt="" aria-hidden="true" width="128" height="56" loading="lazy" /><span class="popular-art-label">Desain</span></div>
+            <div class="popular-info"><div><h3>Canva</h3><p>Varian 1 bulan dan 1 tahun</p><span class="public-sales">149 terjual di katalog publik</span></div><button class="detail-button" type="button" aria-label="Buka detail referensi Canva" data-demo-detail>↗</button></div>
           </article>
         </div>
+        <p class="snapshot-caption">Snapshot publik per 23 Oktober 2026. Periksa detail dan sumber sebelum mengandalkan informasi ini.</p>
       </section>
 
-      <section class="catalog-section shell" id="katalog" aria-labelledby="catalog-title">
-        <div class="section-heading">
-          <div><div class="eyebrow"><span class="eyebrow-line"></span> PILIHAN UNTUKMU</div><h2 id="catalog-title">Jelajahi katalog</h2><p>Temukan kategori yang cocok untuk kebutuhanmu.</p></div>
-          <div class="catalog-count"><span id="result-count">9</span> item katalog</div>
-        </div>
-        <div class="catalog-toolbar">
-          <div class="category-tabs" role="group" aria-label="Filter kategori">
-            <button class="category-tab selected" type="button" data-category="all" aria-pressed="true">Semua</button>
-            <button class="category-tab" type="button" data-category="aplikasi" aria-pressed="false">Aplikasi</button>
-            <button class="category-tab" type="button" data-category="ai" aria-pressed="false">AI</button>
-            <button class="category-tab" type="button" data-category="vpn" aria-pressed="false">VPN</button>
-            <button class="category-tab" type="button" data-category="ewallet" aria-pressed="false">E-wallet</button>
-            <button class="category-tab" type="button" data-category="pulsa" aria-pressed="false">Pulsa</button>
-            <button class="category-tab" type="button" data-category="game" aria-pressed="false">Token & game</button>
-            <button class="category-tab" type="button" data-category="sosmed" aria-pressed="false">Sosial media</button>
+      <section class="catalog-section" id="katalog" aria-labelledby="catalog-title">
+        <div class="section-wrap">
+          <div class="section-heading catalog-heading" data-reveal="heading">
+            <div>
+              <h2 id="catalog-title">Katalog produk</h2>
+              <p class="section-intro">Pilih kategori atau cari nama produk untuk membaca snapshot dan ketentuannya.</p>
+            </div>
+            <div class="catalog-count" aria-live="polite"><span id="result-count">9</span> hasil</div>
           </div>
-          <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><span class="visually-hidden">Cari kategori</span><input id="catalog-search" type="search" placeholder="Cari kategori..." autocomplete="off" /><kbd>/</kbd></label>
+          <div class="catalog-toolbar" data-reveal="toolbar">
+            <div class="category-tabs" role="group" aria-label="Filter kategori">
+              <button class="category-tab selected" type="button" data-category="all" aria-pressed="true">Semua</button>
+              <button class="category-tab" type="button" data-category="aplikasi" aria-pressed="false">Aplikasi</button>
+              <button class="category-tab" type="button" data-category="ai" aria-pressed="false">AI</button>
+              <button class="category-tab" type="button" data-category="vpn" aria-pressed="false">VPN</button>
+              <button class="category-tab" type="button" data-category="ewallet" aria-pressed="false">E-wallet</button>
+              <button class="category-tab" type="button" data-category="pulsa" aria-pressed="false">Pulsa</button>
+              <button class="category-tab" type="button" data-category="game" aria-pressed="false">Token &amp; game</button>
+              <button class="category-tab" type="button" data-category="sosmed" aria-pressed="false">Sosial media</button>
+            </div>
+            <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><span class="visually-hidden">Cari kategori atau produk</span><input id="catalog-search" type="search" placeholder="Cari kategori atau produk" autocomplete="off" /><kbd aria-hidden="true">/</kbd></label>
+          </div>
+          <p class="api-status" id="api-status" role="status" hidden></p>
+          <div class="product-grid" id="product-grid">
+            <article class="product-card" data-ui data-reveal="item" data-category="aplikasi" data-public-product="canva" data-search="aplikasi premium canva canva pro desain">
+              <div class="product-visual product-visual-logo visual-canva" data-reveal="visual"><span class="visual-label">Aplikasi</span><img class="product-brand-logo product-brand-canva" src="assets/logos/canva.svg" alt="Logo Canva" width="150" height="70" /></div>
+              <div class="product-info"><div class="product-meta"><span class="product-category">Aplikasi</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Canva Pro</h3><p>Aktivasi ke akun Canva milik pembeli.</p><div class="product-bottom"><span class="price-placeholder">Harga publik sebagai referensi</span><button class="detail-button" type="button" aria-label="Buka detail Canva Pro" data-demo-detail>↗</button></div></div>
+            </article>
+            <article class="product-card" data-ui data-reveal="item" data-category="aplikasi" data-public-product="youtube" data-search="aplikasi youtube youtube premium musik video">
+              <div class="product-visual product-visual-logo visual-youtube" data-reveal="visual"><span class="visual-label">Aplikasi</span><img class="product-brand-logo" src="assets/logos/youtube.svg" alt="Logo YouTube" width="80" height="80" /></div>
+              <div class="product-info"><div class="product-meta"><span class="product-category">Aplikasi</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>YouTube Premium</h3><p>Varian dengan akun milik pembeli tercatat di sumber.</p><div class="product-bottom"><span class="price-placeholder">Harga publik sebagai referensi</span><button class="detail-button" type="button" aria-label="Buka detail YouTube Premium" data-demo-detail>↗</button></div></div>
+            </article>
+            <article class="product-card" data-ui data-reveal="item" data-category="aplikasi" data-public-product="apple-music" data-search="aplikasi apple music musik streaming">
+              <div class="product-visual product-visual-logo visual-apple-music" data-reveal="visual"><span class="visual-label">Aplikasi</span><img class="product-brand-logo" src="assets/logos/applemusic.svg" alt="Logo Apple Music" width="80" height="80" /></div>
+              <div class="product-info"><div class="product-meta"><span class="product-category">Aplikasi</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Apple Music</h3><p>Undangan ke Apple Account pembeli.</p><div class="product-bottom"><span class="price-placeholder">Harga publik sebagai referensi</span><button class="detail-button" type="button" aria-label="Buka detail Apple Music" data-demo-detail>↗</button></div></div>
+            </article>
+            <article class="product-card" data-ui data-reveal="item" data-category="ai" data-public-product="gemini" data-search="ai google gemini artificial intelligence">
+              <div class="product-visual product-visual-logo visual-gemini" data-reveal="visual"><span class="visual-label">AI</span><img class="product-brand-logo" src="assets/logos/gemini.svg" alt="Logo Google Gemini" width="80" height="80" /></div>
+              <div class="product-info"><div class="product-meta"><span class="product-category">AI</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Google Gemini</h3><p>Link redeem untuk akun Google sendiri.</p><div class="product-bottom"><span class="price-placeholder">Harga publik sebagai referensi</span><button class="detail-button" type="button" aria-label="Buka detail Google Gemini" data-demo-detail>↗</button></div></div>
+            </article>
+            <article class="product-card" data-ui data-reveal="item" data-category="vpn" data-search="vpn keamanan jaringan hma surfshark">
+              <div class="product-visual visual-vpn" data-reveal="visual"><span class="visual-label">VPN belum diaktifkan</span><div class="brand-chip-list"><span class="brand-chip"><img src="assets/logos/hma.svg" alt="" aria-hidden="true" width="40" height="40" /><span>HMA VPN</span></span><span class="brand-chip"><img src="assets/logos/surfshark.svg" alt="" aria-hidden="true" width="40" height="40" /><span>Surfshark</span></span></div></div>
+              <div class="product-info"><div class="product-meta"><span class="product-category">VPN</span><span class="demo-status"><i></i> Perlu SKU personal</span></div><h3>Layanan VPN</h3><p>SKU akun toko dikecualikan dari katalog TStore.</p><div class="product-bottom"><span class="price-placeholder">Belum diaktifkan</span><button class="detail-button" type="button" aria-label="Buka catatan kategori VPN" data-demo-detail>↗</button></div></div>
+            </article>
+            <article class="product-card" data-ui data-reveal="item" data-category="ewallet" data-search="ewallet dana gopay ovo shopeepay grabpay linkaja">
+              <div class="product-visual visual-entertainment" data-reveal="visual"><span class="visual-label">E-wallet</span><div class="brand-chip-list"><span class="brand-chip"><img src="assets/logos/gopay.svg" alt="" aria-hidden="true" width="40" height="40" /><span>GoPay</span></span><span class="brand-chip"><img src="assets/logos/ovo.svg" alt="" aria-hidden="true" width="40" height="40" /><span>OVO</span></span><span class="brand-chip"><img src="assets/logos/dana.svg" alt="" aria-hidden="true" width="40" height="40" /><span>DANA</span></span><span class="brand-chip"><img src="assets/logos/shopee.svg" alt="" aria-hidden="true" width="40" height="40" /><span>ShopeePay</span></span></div></div>
+              <div class="product-info"><div class="product-meta"><span class="product-category">E-wallet</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Top up e-wallet</h3><p>Nominal dikirim ke nomor tujuan.</p><div class="product-bottom"><span class="price-placeholder">Pilih penyedia untuk detail</span><button class="detail-button" type="button" aria-label="Buka detail kategori e-wallet" data-demo-detail>↗</button></div></div>
+            </article>
+            <article class="product-card" data-ui data-reveal="item" data-category="pulsa" data-search="pulsa telkomsel indosat tri byu axis smartfren xl">
+              <div class="product-visual visual-game" data-reveal="visual"><span class="visual-label">Pulsa</span><div class="brand-chip-list"><span class="brand-chip"><img src="assets/logos/telkomsel.svg" alt="" aria-hidden="true" width="40" height="40" /><span>Telkomsel</span></span><span class="brand-chip"><img src="assets/logos/im3.svg" alt="" aria-hidden="true" width="40" height="40" /><span>Indosat</span></span><span class="brand-chip"><img src="assets/logos/tri.svg" alt="" aria-hidden="true" width="40" height="40" /><span>Tri</span></span><span class="brand-chip"><img src="assets/logos/xl.svg" alt="" aria-hidden="true" width="40" height="40" /><span>XL</span></span><span class="brand-chip"><img src="assets/logos/axis.svg" alt="" aria-hidden="true" width="40" height="40" /><span>AXIS</span></span><span class="brand-chip"><img src="assets/logos/byu.svg" alt="" aria-hidden="true" width="40" height="40" /><span>by.U</span></span><span class="brand-chip"><img src="assets/logos/smartfren.svg" alt="" aria-hidden="true" width="40" height="40" /><span>Smartfren</span></span></div></div>
+              <div class="product-info"><div class="product-meta"><span class="product-category">PULSA</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Pulsa operator</h3><p>7 operator dengan beragam nominal di katalog sumber.</p><div class="product-bottom"><span class="price-placeholder">Pilih operator untuk detail</span><button class="detail-button" type="button" aria-label="Buka detail kategori pulsa" data-demo-detail>↗</button></div></div>
+            </article>
+            <article class="product-card" data-ui data-reveal="item" data-category="game" data-search="token listrik pln game mobile legends top up">
+              <div class="product-visual visual-work" data-reveal="visual"><span class="visual-label">Token &amp; game</span><div class="brand-chip-list"><span class="brand-chip"><img src="assets/logos/pln.svg" alt="" aria-hidden="true" width="40" height="40" /><span>Token PLN</span></span><span class="brand-chip brand-chip-mobile-legends"><img src="assets/logos/mobile-legends.webp" alt="" aria-hidden="true" width="80" height="40" /><span>Mobile Legends</span></span></div></div>
+              <div class="product-info"><div class="product-meta"><span class="product-category">Token &amp; game</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Token listrik &amp; game</h3><p>Token PLN dan Diamond Mobile Legends ada di sumber.</p><div class="product-bottom"><span class="price-placeholder">Pilih produk untuk detail</span><button class="detail-button" type="button" aria-label="Buka detail kategori token dan game" data-demo-detail>↗</button></div></div>
+            </article>
+            <article class="product-card" data-ui data-reveal="item" data-category="sosmed" data-search="sosmed instagram tiktok youtube followers likes views">
+              <div class="product-visual visual-social" data-reveal="visual"><span class="visual-label">Sosial media, perlu ditinjau</span><div class="brand-chip-list"><span class="brand-chip"><img src="assets/logos/instagram.svg" alt="" aria-hidden="true" width="40" height="40" /><span>Instagram</span></span><span class="brand-chip"><img src="assets/logos/tiktok.svg" alt="" aria-hidden="true" width="40" height="40" /><span>TikTok</span></span><span class="brand-chip"><img src="assets/logos/youtube.svg" alt="" aria-hidden="true" width="40" height="40" /><span>YouTube</span></span></div></div>
+              <div class="product-info"><div class="product-meta"><span class="product-category">Sosial media</span><span class="demo-status"><i></i> Belum dirinci</span></div><h3>Jasa sosial media</h3><p>Daftar SKU dan kebijakan perlu diperiksa dahulu.</p><div class="product-bottom"><span class="price-placeholder">Belum diaktifkan</span><button class="detail-button" type="button" aria-label="Buka catatan kategori sosial media" data-demo-detail>↗</button></div></div>
+            </article>
+          </div>
+          <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">⌕</span><h3>Kategori belum ditemukan</h3><p>Coba kata kunci atau filter yang berbeda.</p></div>
+          <aside class="catalog-footnote"><span aria-hidden="true">i</span><p>Katalog ini adalah snapshot publik, bukan penawaran final TStore. Hak jual, SKU, harga, stok, dan ketentuan masih perlu dikonfirmasi setelah reseller disetujui.</p></aside>
         </div>
-        <p class="api-status" id="api-status" role="status" hidden></p>
-        <div class="product-grid" id="product-grid">
-          <article class="product-card" data-category="aplikasi" data-public-product="canva" data-search="aplikasi premium canva canva pro desain">
-            <div class="product-visual product-visual-logo visual-canva"><span class="visual-label">01 / APLIKASI</span><img class="product-brand-logo product-brand-canva" src="assets/logos/canva.svg" alt="" /></div>
-            <div class="product-info"><div class="product-meta"><span class="product-category">APLIKASI</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Canva Pro</h3><p>Aktivasi ke akun Canva milik pembeli.</p><div class="product-bottom"><span class="price-placeholder">Referensi publik · Rp10.000</span><button class="detail-button" type="button" aria-label="Detail Canva Pro" data-demo-detail>↗</button></div></div>
-          </article>
-          <article class="product-card" data-category="aplikasi" data-public-product="youtube" data-search="aplikasi youtube youtube premium musik video">
-            <div class="product-visual product-visual-logo visual-youtube"><span class="visual-label">01 / APLIKASI</span><img class="product-brand-logo" src="assets/logos/youtube.svg" alt="" /></div>
-            <div class="product-info"><div class="product-meta"><span class="product-category">APLIKASI</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>YouTube Premium</h3><p>Varian akun milik pembeli tercantum.</p><div class="product-bottom"><span class="price-placeholder">Referensi publik · Rp10.000</span><button class="detail-button" type="button" aria-label="Detail YouTube Premium" data-demo-detail>↗</button></div></div>
-          </article>
-          <article class="product-card" data-category="aplikasi" data-public-product="apple-music" data-search="aplikasi apple music musik streaming">
-            <div class="product-visual product-visual-logo visual-apple-music"><span class="visual-label">01 / APLIKASI</span><img class="product-brand-logo" src="assets/logos/applemusic.svg" alt="" /></div>
-            <div class="product-info"><div class="product-meta"><span class="product-category">APLIKASI</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Apple Music</h3><p>Undangan ke Apple Account pembeli.</p><div class="product-bottom"><span class="price-placeholder">Referensi publik · Rp10.000</span><button class="detail-button" type="button" aria-label="Detail Apple Music" data-demo-detail>↗</button></div></div>
-          </article>
-          <article class="product-card" data-category="ai" data-public-product="gemini" data-search="ai google gemini artificial intelligence">
-            <div class="product-visual product-visual-logo visual-gemini"><span class="visual-label">02 / AI</span><img class="product-brand-logo" src="assets/logos/gemini.svg" alt="" /></div>
-            <div class="product-info"><div class="product-meta"><span class="product-category">AI</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Google Gemini</h3><p>Link redeem untuk akun Google sendiri.</p><div class="product-bottom"><span class="price-placeholder">Referensi publik · Rp75.000</span><button class="detail-button" type="button" aria-label="Detail Google Gemini" data-demo-detail>↗</button></div></div>
-          </article>
-          <article class="product-card" data-category="vpn" data-search="vpn keamanan jaringan hma surfshark">
-            <div class="product-visual visual-vpn"><span class="visual-label">03 / VPN · BELUM AKTIF</span><div class="brand-chip-list"><span class="brand-chip"><img src="assets/logos/hma.svg" alt="" /><span>HMA VPN</span></span><span class="brand-chip"><img src="assets/logos/surfshark.svg" alt="" /><span>Surfshark</span></span></div></div>
-            <div class="product-info"><div class="product-meta"><span class="product-category">VPN</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Layanan VPN</h3><p>Listing publik ada, tetapi SKU login akun toko dikecualikan.</p><div class="product-bottom"><span class="price-placeholder">Lihat detail snapshot</span><button class="detail-button" type="button" aria-label="Detail kategori VPN" data-demo-detail>↗</button></div></div>
-          </article>
-          <article class="product-card" data-category="ewallet" data-search="ewallet dana gopay ovo shopeepay grabpay linkaja">
-            <div class="product-visual visual-entertainment"><span class="visual-label">04 / E-WALLET</span><div class="brand-chip-list"><span class="brand-chip"><img src="assets/logos/gopay.svg" alt="" /><span>GoPay</span></span><span class="brand-chip"><img src="assets/logos/ovo.svg" alt="" /><span>OVO</span></span><span class="brand-chip"><img src="assets/logos/dana.svg" alt="" /><span>DANA</span></span><span class="brand-chip"><img src="assets/logos/shopee.svg" alt="" /><span>ShopeePay</span></span></div></div>
-            <div class="product-info"><div class="product-meta"><span class="product-category">E-WALLET</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Top up e-wallet</h3><p>Daftar e-wallet, nominal, dan harga publik tersedia di detail.</p><div class="product-bottom"><span class="price-placeholder">Lihat detail snapshot</span><button class="detail-button" type="button" aria-label="Detail kategori e-wallet" data-demo-detail>↗</button></div></div>
-          </article>
-          <article class="product-card" data-category="pulsa" data-search="pulsa telkomsel indosat tri byu axis smartfren xl">
-            <div class="product-visual visual-game"><span class="visual-label">05 / PULSA</span><div class="brand-chip-list"><span class="brand-chip"><img src="assets/logos/telkomsel.svg" alt="" /><span>Telkomsel</span></span><span class="brand-chip"><img src="assets/logos/im3.svg" alt="" /><span>Indosat</span></span><span class="brand-chip"><img src="assets/logos/tri.svg" alt="" /><span>Tri</span></span><span class="brand-chip"><img src="assets/logos/xl.svg" alt="" /><span>XL</span></span><span class="brand-chip"><img src="assets/logos/axis.svg" alt="" /><span>AXIS</span></span><span class="brand-chip"><img src="assets/logos/byu.svg" alt="" /><span>by.U</span></span><span class="brand-chip"><img src="assets/logos/smartfren.svg" alt="" /><span>Smartfren</span></span></div></div>
-            <div class="product-info"><div class="product-meta"><span class="product-category">PULSA</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Pulsa operator</h3><p>7 operator dengan beragam nominal di katalog publik.</p><div class="product-bottom"><span class="price-placeholder">Lihat detail snapshot</span><button class="detail-button" type="button" aria-label="Detail kategori pulsa" data-demo-detail>↗</button></div></div>
-          </article>
-          <article class="product-card" data-category="game" data-search="token listrik pln game mobile legends top up">
-            <div class="product-visual visual-work"><span class="visual-label">06 / TOKEN & GAME</span><div class="brand-chip-list"><span class="brand-chip"><img src="assets/logos/pln.svg" alt="" /><span>Token PLN</span></span><span class="brand-chip brand-chip-mobile-legends"><img src="assets/logos/mobile-legends.webp" alt="" /><span>Mobile Legends</span></span></div></div>
-            <div class="product-info"><div class="product-meta"><span class="product-category">TOKEN & GAME</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Token listrik & game</h3><p>Token PLN dan Diamond Mobile Legends ada di snapshot publik.</p><div class="product-bottom"><span class="price-placeholder">Lihat detail snapshot</span><button class="detail-button" type="button" aria-label="Detail kategori token dan game" data-demo-detail>↗</button></div></div>
-          </article>
-          <article class="product-card" data-category="sosmed" data-search="sosmed instagram tiktok youtube followers likes views">
-            <div class="product-visual visual-social"><span class="visual-label">07 / SOSIAL MEDIA</span><div class="brand-chip-list"><span class="brand-chip"><img src="assets/logos/instagram.svg" alt="" /><span>Instagram</span></span><span class="brand-chip"><img src="assets/logos/tiktok.svg" alt="" /><span>TikTok</span></span><span class="brand-chip"><img src="assets/logos/youtube.svg" alt="" /><span>YouTube</span></span></div></div>
-            <div class="product-info"><div class="product-meta"><span class="product-category">SOSIAL MEDIA</span><span class="demo-status"><i></i> Snapshot publik</span></div><h3>Jasa sosial media</h3><p>Layanan dan kebijakan platform perlu ditinjau.</p><div class="product-bottom"><span class="price-placeholder">Lihat detail snapshot</span><button class="detail-button" type="button" aria-label="Detail kategori sosial media" data-demo-detail>↗</button></div></div>
-          </article>
-        </div>
-        <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>Kategori belum ditemukan</h3><p>Coba kata kunci atau filter yang berbeda.</p></div>
-        <div class="catalog-footnote"><span>ⓘ</span> Kategori ini disusun dari katalog publik dan masih menunggu persetujuan reseller. SKU, hak jual, harga, stok, dan ketentuan perlu dikonfirmasi sebelum toko dibuka.</div>
       </section>
 
-      <section class="how-section" id="cara-kerja" aria-labelledby="how-title"><div class="shell how-inner"><div class="how-intro"><div class="eyebrow light"><span class="eyebrow-line"></span> BELANJA TANPA BINGUNG</div><h2 id="how-title">Jelas dari awal,<br /><span>sampai selesai.</span></h2><p>Setiap langkah seharusnya terasa mudah dipahami. Ini gambaran alur belanja yang akan diterapkan.</p></div><div class="steps"><article class="step"><span class="step-number">01</span><div><h3>Pilih produk</h3><p>Periksa variasi, harga, dan ketentuan sebelum memilih.</p></div><span class="step-arrow">↗</span></article><article class="step"><span class="step-number">02</span><div><h3>Tinjau pesanan</h3><p>Pastikan ringkasan dan informasi kontak sudah sesuai.</p></div><span class="step-arrow">↗</span></article><article class="step"><span class="step-number">03</span><div><h3>Pantau status</h3><p>Lihat perkembangan pesanan melalui halaman yang aman.</p></div><span class="step-arrow">↗</span></article></div></div></section>
+      <section class="status-section" id="status" aria-labelledby="status-title">
+        <div class="section-wrap status-layout">
+          <div class="status-copy" data-reveal="copy">
+            <h2 id="status-title">Status toko</h2>
+            <p class="section-intro">Informasi transaksi baru ditambahkan setelah akses, produk, dan cara pembayaran resmi terkonfirmasi.</p>
+          </div>
+          <ul class="status-list">
+            <li data-reveal="item"><span class="status-symbol waiting" aria-hidden="true">…</span><div><h3>Persetujuan reseller</h3><p>Pengajuan TStore masih menunggu persetujuan.</p></div></li>
+            <li data-reveal="item"><span class="status-symbol" aria-hidden="true">○</span><div><h3>Harga dan ketersediaan</h3><p>Belum ditampilkan sebagai harga jual atau stok TStore.</p></div></li>
+            <li data-reveal="item"><span class="status-symbol" aria-hidden="true">○</span><div><h3>Pembayaran dan pemenuhan</h3><p>Fitur pembelian belum aktif sampai jalur resmi siap.</p></div></li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer" id="dukungan"><div class="shell footer-inner"><a class="brand footer-brand" href="#beranda" aria-label="TStore, beranda"><img class="brand-mark" src="assets/logos/tstore.svg" alt="" aria-hidden="true" /><span class="brand-name">TStore</span></a><p>Toko digital untuk kebutuhan sehari-hari.</p><a class="footer-help" href="mailto:halo@example.com">Perlu bantuan? <span>Hubungi kami ↗</span></a></div><div class="shell footer-bottom"><span>© 2026 TStore · Prototipe demo</span><span>Privasi &nbsp;·&nbsp; Syarat & ketentuan</span></div></footer>
-    <dialog class="demo-dialog" id="demo-dialog" aria-labelledby="detail-title"><div class="dialog-mark">i</div><h2 id="detail-title">Detail kategori</h2><p id="detail-description"></p><ul class="detail-list" id="detail-list"></ul><p class="dialog-note" id="detail-note">Produk, stok, harga, dan ketentuan akan diisi setelah data reseller/API resmi tersedia.</p><a class="dialog-source" id="detail-source" href="#" target="_blank" rel="noreferrer" hidden>Lihat sumber katalog publik ↗</a><button class="primary-button dialog-close" type="button">Mengerti</button><button class="dialog-x" type="button" aria-label="Tutup">×</button></dialog>
+    <footer class="site-footer">
+      <div class="section-wrap footer-main">
+        <a class="brand footer-brand" href="#beranda" aria-label="TStore, kembali ke atas"><img class="brand-mark" src="assets/logos/tstore.svg" alt="" aria-hidden="true" width="40" height="40" /><span class="brand-name">TStore</span></a>
+        <p>Pratinjau katalog untuk toko digital TStore.</p>
+        <a class="source-link" href="https://waroengkuy.com/reseller/panduan" target="_blank" rel="noreferrer">Panduan reseller sumber <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="section-wrap footer-bottom"><span>© 2026 TStore · Katalog belum menerima pesanan</span><a href="#beranda">Kembali ke atas ↑</a></div>
+    </footer>
+
+    <dialog class="demo-dialog" id="demo-dialog" aria-labelledby="detail-title" aria-describedby="detail-description">
+      <div class="dialog-mark" aria-hidden="true">i</div>
+      <h2 id="detail-title">Detail kategori</h2>
+      <p id="detail-description"></p>
+      <ul class="detail-list" id="detail-list"></ul>
+      <p class="dialog-note" id="detail-note">Produk, stok, harga, dan ketentuan akan diisi setelah data reseller/API resmi tersedia.</p>
+      <a class="dialog-source" id="detail-source" href="#" target="_blank" rel="noreferrer" hidden>Lihat sumber katalog publik ↗</a>
+      <button class="primary-button dialog-close" type="button">Mengerti</button>
+      <button class="dialog-x" type="button" aria-label="Tutup detail">×</button>
+    </dialog>
   </body>
 </html>

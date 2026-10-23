@@ -14,52 +14,70 @@ const apiStatus = document.querySelector("#api-status");
 const demoBannerCopy = document.querySelector("#demo-banner-copy");
 let selectedCategory = "all";
 const apiProductDetails = new WeakMap();
+const revealObserver = "IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ? new IntersectionObserver((entries, observer) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add("is-in");
+        observer.unobserve(entry.target);
+      }
+    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 })
+  : null;
+
+function observeRevealItems(root = document) {
+  if (!revealObserver) return;
+  const items = root.querySelectorAll("[data-reveal]:not(.is-in)");
+  items.forEach((item, index) => {
+    if (item.dataset.reveal === "item") item.style.setProperty("--reveal-delay", `${(index % 4) * 70}ms`);
+    revealObserver.observe(item);
+  });
+}
 
 const categoryDetails = {
   aplikasi: {
-    title: "Aplikasi Premium — snapshot publik",
+    title: "Aplikasi Premium: snapshot publik",
     description: "Produk yang ditemukan di katalog publik. Saya catat hanya varian yang mengaktifkan akun milik pembeli; akun yang disediakan toko dikecualikan.",
     items: ["Canva Pro: 1 bulan Rp10.000 atau 1 tahun Rp50.000; akun Canva pembeli, diproses admin", "YouTube Premium: 1 bulan Rp10.000; pilih aktivasi ke akun pembeli, diproses admin", "Apple Music: 1 bulan Rp10.000; undangan ke Apple Account pembeli", "Publik mencantumkan ketiganya tersedia saat dicek", "Tidak dimasukkan: Spotify stok habis dan memakai akun toko; CapCut, Meitu, Wink, Alight Motion, Zoom, Scribd, dan paket lain yang memakai akun toko"],
     note: "Snapshot 23 Okt 2026. Harga publik bukan harga reseller atau harga TStore. Izin jual dan SKU reseller masih harus dikonfirmasi; katalog ini belum bisa dibeli.",
     source: "https://waroengkuy.com/beli/produk/canva",
   },
   ai: {
-    title: "AI — snapshot publik",
+    title: "AI: snapshot publik",
     description: "Varian individual yang ditemukan adalah Google Gemini dengan link redeem ke akun Google pembeli.",
     items: ["Google Gemini 18 bulan (link redeem): Rp75.000; tercantum tersedia", "Gemini 1 tahun Rp50.000 memakai akun dari toko, jadi dikecualikan", "RunningHub tercantum Rp7.500 untuk 5.600 RH Coins, tetapi detail produk menyebut akun dari toko, jadi dikecualikan", "Paket ChatGPT, Claude, Perplexity, Grok, dan layanan patungan lain tidak dimasukkan"],
     note: "Snapshot 23 Okt 2026. Hak jual, ketersediaan terbaru, dan cara fulfillment perlu dikonfirmasi setelah akses reseller disetujui.",
     source: "https://waroengkuy.com/beli/produk/google-gemini",
   },
   vpn: {
-    title: "VPN — perlu SKU personal",
+    title: "VPN: perlu SKU personal",
     description: "Katalog publik menampilkan HMA VPN dan Surfshark VPN, tetapi instruksi produk meminta login memakai akun dari toko.",
     items: ["HMA VPN: harga publik mulai Rp10.000; tercantum 20 stok", "Surfshark VPN: harga publik mulai Rp10.000; tercantum 19 stok", "Kedua SKU dikecualikan dari katalog TStore karena memakai akun dari toko", "Aktifkan kategori ini hanya jika tersedia lisensi/redeem personal dan hak jualnya terverifikasi"],
     note: "Snapshot 23 Okt 2026. Jumlah stok/harga halaman publik bukan stok atau harga reseller TStore.",
     source: "https://waroengkuy.com/beli/produk/hma-vpn",
   },
   ewallet: {
-    title: "E-wallet — produk yang tercantum publik",
+    title: "E-wallet: produk yang tercantum publik",
     description: "Top up saldo diarahkan ke nomor tujuan. Contoh harga berikut adalah harga katalog publik paling rendah yang saya lihat.",
     items: ["GoPay mulai Rp1.975; OVO Rp9.825; ShopeePay Rp1.125; DANA Rp1.225", "GoPay Driver Rp10.905; GoPay Promo Rp80.905; GrabPay Rp19.915; GrabPay Driver Rp11.375", "Voucher GrabFood Rp9.475; i.saku Rp10.825; KasPro Rp10.825; LinkAja Rp10.375", "LinkAja Entitas Rp10.675; OVO termasuk admin Rp10.825; ShopeePay belum termasuk admin Rp4.125; AstraPay Rp10.825", "Setiap produk punya beberapa nominal; cek ulang nomor tujuan sebelum mengirim pesanan"],
     note: "Snapshot 23 Okt 2026. Harga/nominal dan status tiap varian berubah; ini bukan harga modal reseller atau ketersediaan TStore.",
     source: "https://waroengkuy.com/beli/produk/saldo-gopay",
   },
   pulsa: {
-    title: "Pulsa — operator yang tercantum publik",
+    title: "Pulsa: operator yang tercantum publik",
     description: "Katalog menampilkan pengisian ke nomor tujuan untuk operator berikut; harga termurah yang tampil berbeda per operator.",
     items: ["Telkomsel mulai Rp2.834; Indosat Rp6.638; Tri Rp5.203; By.U Rp3.810", "Axis mulai Rp5.884; Smartfren Rp5.079; XL Rp5.884", "Tersedia banyak pilihan nominal per operator; katalog publik menyebut pengiriman biasanya beberapa menit", "Nomor salah tidak bisa ditarik menurut keterangan halaman sumber"],
     note: "Snapshot 23 Okt 2026. Harga dan status bisa berubah sewaktu-waktu; belum ada koneksi stok atau harga reseller TStore.",
     source: "https://waroengkuy.com/beli/produk/pulsa-telkomsel",
   },
   game: {
-    title: "Token & game — produk yang tercantum publik",
+    title: "Token & game: produk yang tercantum publik",
     description: "Produk yang ditemukan adalah token PLN dan top up Diamond Mobile Legends.",
     items: ["Token PLN: nominal publik mulai Rp5.000, harga Rp7.000; tercantum tersedia", "Mobile Legends: Diamond mulai Rp1.994 untuk paket 5 Diamond; tercantum tersedia", "Token PLN memakai ID pelanggan/nomor meter; Mobile Legends memakai User ID dan Zone ID", "Katalog sumber punya banyak pilihan nominal; data TStore belum tersambung"],
     note: "Snapshot 23 Okt 2026. Pastikan ID tujuan benar; harga/status di halaman publik bukan penawaran final TStore.",
     source: "https://waroengkuy.com/beli/produk/mobile-legends",
   },
   sosmed: {
-    title: "Jasa sosial media — belum dirinci",
+    title: "Jasa sosial media: belum dirinci",
     description: "Program reseller menyebut layanan followers, likes, dan views, tetapi daftar SKU dan ketentuannya belum masuk dalam snapshot katalog ini.",
     items: ["Perlu daftar layanan per platform, jumlah minimum/maksimum, dan estimasi pengerjaan", "Perlu memeriksa ketentuan platform serta kebijakan refill/komplain", "Jangan meminta kata sandi akun pembeli", "Belum dimasukkan sebagai produk yang bisa dipesan"],
     note: "Tunggu katalog SKU dan ketentuan resmi sebelum menayangkan jasa ini.",
@@ -69,35 +87,35 @@ const categoryDetails = {
 
 const publicProductDetails = {
   "apple-music": {
-    title: "Apple Music — referensi publik",
+    title: "Apple Music: referensi publik",
     description: "Halaman publik mencantumkan paket 1 bulan Rp10.000, tersedia, dan dikirim melalui undangan ke email Apple Account pembeli.",
     items: ["Varian yang dicatat: 1 bulan · Rp10.000", "Status halaman publik: tersedia · 12 terjual", "Pemenuhan disebut diproses admin lewat undangan email"],
     note: "Snapshot publik bukan harga reseller atau harga final TStore. Hak jual dan SKU reseller masih harus dikonfirmasi.",
     source: "https://waroengkuy.com/beli/produk/apple-music",
   },
   spotify: {
-    title: "Spotify Premium — referensi publik",
+    title: "Spotify Premium: referensi publik",
     description: "Saat dicek pada 23 Okt 2026, halaman publik menyebut stok habis. Deskripsi paket menyebut login dengan akun dari toko, jadi tidak saya aktifkan untuk TStore.",
     items: ["Stok publik: habis", "Harga beli tidak ditampilkan saat stok habis", "TStore hanya akan mempertimbangkan paket akun pembeli sendiri, tanpa akun bersama"],
     note: "Snapshot publik bukan data reseller. Tunggu SKU personal dan izin jual yang sesuai preferensi TStore.",
     source: "https://waroengkuy.com/beli/produk/spotify-premium",
   },
   youtube: {
-    title: "YouTube Premium — referensi publik",
+    title: "YouTube Premium: referensi publik",
     description: "Halaman publik mencantumkan paket 1 bulan Rp10.000, status tersedia, dan 189 terjual. Keterangan menyebut pembeli dapat memakai akun sendiri; hanya opsi itu yang cocok untuk ditinjau.",
     items: ["Varian yang dicatat: 1 bulan · Rp10.000", "Status di halaman publik: tersedia · 189 terjual", "Metode aktivasi dan pemenuhan masih perlu dikonfirmasi untuk SKU personal"],
     note: "Harga katalog publik bukan harga modal reseller atau harga TStore. Produk belum diaktifkan untuk dibeli.",
     source: "https://waroengkuy.com/beli/produk/youtube",
   },
   gemini: {
-    title: "Google Gemini — referensi publik",
+    title: "Google Gemini: referensi publik",
     description: "Halaman publik mencantumkan 18 bulan melalui link redeem seharga Rp75.000, yang dipakai pada akun Google pembeli. Varian 1 tahun yang memakai akun toko tidak saya masukkan.",
     items: ["Varian yang dicatat: 18 bulan · link redeem · Rp75.000", "Status halaman: tersedia · halaman utama mencatat 192 terjual", "Varian 1 tahun Rp50.000 dikecualikan karena memakai akun dari toko"],
     note: "Snapshot halaman publik bukan harga reseller. Hak jual, ketersediaan terbaru, dan cara fulfillment perlu dikonfirmasi.",
     source: "https://waroengkuy.com/beli/produk/google-gemini",
   },
   canva: {
-    title: "Canva — referensi publik",
+    title: "Canva: referensi publik",
     description: "Halaman publik mencantumkan Canva pada akun milik pembeli melalui email, dengan dua masa aktif.",
     items: ["1 bulan · Rp10.000", "1 tahun · Rp50.000", "Status halaman: tersedia · 149 terjual", "Aktivasi disebut diproses admin ke akun pembeli"],
     note: "Snapshot katalog publik bukan harga reseller. SKU dan izin jual TStore tetap perlu dikonfirmasi.",
@@ -143,6 +161,8 @@ function createApiProductCard(product) {
   const card = document.createElement("article");
   const category = classifyApiProduct(product);
   card.className = "product-card";
+  card.dataset.reveal = "item";
+  card.dataset.ui = "";
   card.dataset.category = category;
   card.dataset.search = [product.product, product.variant, product.category, product.description, product.variantDescription]
     .filter(Boolean)
@@ -151,9 +171,10 @@ function createApiProductCard(product) {
 
   const visual = document.createElement("div");
   visual.className = "product-visual api-product-visual";
+  visual.dataset.reveal = "visual";
   const label = document.createElement("span");
   label.className = "visual-label";
-  label.textContent = product.category || "KATALOG API";
+  label.textContent = product.category || "Katalog API";
   visual.append(label);
   if (product.image) {
     const image = document.createElement("img");
@@ -175,7 +196,10 @@ function createApiProductCard(product) {
   meta.className = "product-meta";
   const categoryLabel = document.createElement("span");
   categoryLabel.className = "product-category";
-  categoryLabel.textContent = product.category || "KATALOG API";
+  const categoryName = product.category
+    ? `${product.category.charAt(0).toLocaleUpperCase("id")}${product.category.slice(1).toLocaleLowerCase("id")}`
+    : "Katalog API";
+  categoryLabel.textContent = categoryName;
   const status = document.createElement("span");
   status.className = "demo-status";
   const statusDot = document.createElement("i");
@@ -217,16 +241,16 @@ function createApiProductDetail(product) {
         ? "Stok habis"
         : `Stok ${product.stock}`;
   return {
-    title: [product.product, product.variant].filter(Boolean).join(" — ") || "Detail produk API",
+    title: [product.product, product.variant].filter(Boolean).join(" ") || "Detail produk API",
     description: [product.description, product.variantDescription].filter(Boolean).join("\n\n").replace(/^#{1,6}\s+/gm, "").replace(/^-\s+/gm, "• ") || "Vendor belum memberikan deskripsi produk.",
     items: [
       `Kategori: ${product.category || "Belum dikategorikan"}`,
-      `Ketersediaan: ${stockText}`,
+      `Informasi dari API sumber: ${stockText}`,
       product.referencePrice === null ? "Harga ritel acuan belum diatur" : `Harga ritel acuan: ${formatRupiah(product.referencePrice)}`,
       product.type === "manual" ? `Tipe: proses manual${product.requiredFields.length ? ` · data yang diminta: ${product.requiredFields.join(", ")}` : ""}` : "Tipe: otomatis",
       product.noWarranty ? "Tanpa garansi: wajib ditinjau sebelum dipertimbangkan untuk dijual" : `Garansi: ${product.warrantyDays === null ? "belum diinformasikan" : `${product.warrantyDays} hari`}`,
     ],
-    note: "Pratinjau lokal dari API reseller. Produk belum dapat dibeli dari TStore; verifikasi hak jual dan ketentuan SKU dahulu.",
+    note: "Ini hanya pratinjau data API sumber. Stok tersebut belum menjamin produk tersedia untuk dibeli di TStore; harga jual dan ketersediaan toko juga mengikuti konfigurasi reseller. Produk belum dapat dibeli dari TStore. Verifikasi hak jual, mode modal, dan ketentuan SKU setelah akses disetujui.",
     source: null,
   };
 }
@@ -254,6 +278,7 @@ async function loadApiCatalog() {
     for (const product of sortedProducts) productFragment.append(createApiProductCard(product));
     productGrid.append(productFragment);
     productCards = [...productGrid.querySelectorAll(".product-card")];
+    observeRevealItems(productGrid);
     demoBannerCopy.textContent = "Pratinjau katalog API lokal · belum menerima pesanan atau pembayaran";
     apiStatus.hidden = false;
     const fetchedTime = new Date(payload.fetchedAt);
@@ -296,6 +321,7 @@ for (const button of categoryButtons) {
 }
 
 searchInput.addEventListener("input", filterProducts);
+observeRevealItems();
 loadApiCatalog();
 document.querySelectorAll("[data-demo-detail]").forEach((button) => {
   button.addEventListener("click", () => showDetails(button));

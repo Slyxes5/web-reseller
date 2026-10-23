@@ -1,0 +1,803 @@
+{
+ "url": "index.html",
+ "at": "2026-10-23T04:02:24.201Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 320,
+   "height": 200,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.59,
+    0.46,
+    0.48,
+    0.5,
+    0.4,
+    0.92,
+    0.92,
+    0.92,
+    0.92,
+    0.92,
+    0.92,
+    0.97
+   ],
+   "motion": {
+    "elements": 8,
+    "css": 8,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 320,
+     "h": 200
+    },
+    "page": {
+     "height": 6675,
+     "screens": 33.4,
+     "words": 482,
+     "img": 28,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 10,
+     "uiAbuse": true,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": null,
+    "h1": {
+     "text": "Katalog digital",
+     "words": 2,
+     "lines": 2,
+     "size": 56,
+     "font": "Manrope"
+    },
+    "headings": [
+     {
+      "text": "Katalog digital",
+      "words": 2,
+      "chars": 15,
+      "lines": 2,
+      "size": 56,
+      "vw": 17.5,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.085,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 242,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "+",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 7.5,
+      "font": "DM Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 661,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Sering dibeli",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 40,
+      "vw": 12.5,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.075,
+      "leading": 1.03,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.65,
+      "top": 1048,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Katalog produk",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 40,
+      "vw": 12.5,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.075,
+      "leading": 1.03,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2335,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "9",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 7.5,
+      "font": "DM Sans",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.05,
+      "top": 2481,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "⌕ Cari kategori atau produk",
+      "words": 5,
+      "chars": 27,
+      "lines": 1,
+      "size": 24,
+      "vw": 7.5,
+      "font": "DM Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2698,
+      "tag": "label",
+      "kind": "heading"
+     },
+     {
+      "text": "Status toko",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 40,
+      "vw": 12.5,
+      "font": "Manrope",
+      "weight": 800,
+      "tracking": -0.075,
+      "leading": 1.03,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5791,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "…",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 7.5,
+      "font": "DM Sans",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.13,
+      "top": 6004,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "○",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 7.5,
+      "font": "DM Sans",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.13,
+      "top": 6127,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "○",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 7.5,
+      "font": "DM Sans",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.13,
+      "top": 6262,
+      "tag": "span",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 3,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.89,
+       "mono": false
+      },
+      {
+       "family": "Manrope",
+       "share": 0.11,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      15,
+      16,
+      18,
+      20,
+      24,
+      40,
+      56
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "DM Sans",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.8
+     },
+     "measureChars": 31,
+     "max": {
+      "size": 56,
+      "vw": 17.5,
+      "font": "Manrope",
+      "text": "Katalog digital"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#eef1eb",
+     "bodyBgHsl": {
+      "h": 90,
+      "s": 0.18,
+      "l": 0.93
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#15392e",
+       "top": 0,
+       "hsl": {
+        "h": 162,
+        "s": 0.46,
+        "l": 0.15
+       }
+      },
+      {
+       "color": "#eef1eb",
+       "top": 76,
+       "hsl": {
+        "h": 90,
+        "s": 0.18,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#a9c2a9",
+       "top": 657,
+       "hsl": {
+        "h": 120,
+        "s": 0.17,
+        "l": 0.71
+       }
+      },
+      {
+       "color": "#e8b64c",
+       "top": 647,
+       "hsl": {
+        "h": 41,
+        "s": 0.77,
+        "l": 0.6
+       }
+      },
+      {
+       "color": "#dfe8df",
+       "top": 992,
+       "hsl": {
+        "h": 120,
+        "s": 0.16,
+        "l": 0.89
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1231,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#cfe0cf",
+       "top": 1231,
+       "hsl": {
+        "h": 120,
+        "s": 0.22,
+        "l": 0.85
+       }
+      },
+      {
+       "color": "#eac9b9",
+       "top": 1470,
+       "hsl": {
+        "h": 20,
+        "s": 0.54,
+        "l": 0.82
+       }
+      },
+      {
+       "color": "#d1d9cb",
+       "top": 1708,
+       "hsl": {
+        "h": 94,
+        "s": 0.16,
+        "l": 0.82
+       }
+      },
+      {
+       "color": "#bdd6de",
+       "top": 1946,
+       "hsl": {
+        "h": 195,
+        "s": 0.33,
+        "l": 0.81
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#1b2b24",
+       "share": 0.49
+      },
+      {
+       "color": "#34483d",
+       "share": 0.27
+      },
+      {
+       "color": "#e0e9e0",
+       "share": 0.08
+      },
+      {
+       "color": "#1e4d3e",
+       "share": 0.08
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.08
+      }
+     ],
+     "button": {
+      "bg": "#eef1eb",
+      "hsl": {
+       "h": 90,
+       "s": 0.18,
+       "l": 0.93
+      },
+      "fg": "#34483d"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 7,
+     "inHero": 1,
+     "radius": 0,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Lewati ke katalog"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 4,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 3,
+     "boxRadius": 50,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 113,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "dm sans",
+     "manrope"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 320,
+     "h": 200
+    },
+    "pageH": 6675,
+    "margins": {
+     "left": 16,
+     "right": 28
+    },
+    "sections": [
+     {
+      "sel": "div.hero-copy.is-in",
+      "tag": "div",
+      "top": 242,
+      "height": 326,
+      "words": 20,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 28,
+      "textLeft": 16,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.hero-art.is-in",
+      "tag": "div",
+      "top": 600,
+      "height": 340,
+      "words": 14,
+      "media": 0,
+      "middle": 18,
+      "heading": null,
+      "left": 55,
+      "right": 30,
+      "textLeft": 55,
+      "textRight": 30,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.section-heading.popular-heading",
+      "tag": "div",
+      "top": 1048,
+      "height": 160,
+      "words": 19,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 44,
+      "textLeft": 16,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.popular-grid",
+      "tag": "div",
+      "top": 1231,
+      "height": 909,
+      "words": 55,
+      "media": 0,
+      "middle": 22,
+      "heading": {
+       "text": "Spotify Premium",
+       "size": 16,
+       "tag": "h3"
+      },
+      "left": 24,
+      "right": 30,
+      "textLeft": 26,
+      "textRight": 88,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#katalog.catalog-section",
+      "tag": "section",
+      "top": 2279,
+      "height": 3457,
+      "words": 252,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Katalog produk",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 27,
+      "textLeft": 16,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#status.status-section",
+      "tag": "section",
+      "top": 5735,
+      "height": 677,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Status toko",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 26,
+      "textLeft": 16,
+      "textRight": 26,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 6413,
+      "height": 262,
+      "words": 22,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 39,
+      "textLeft": 16,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 168,
+      "height": 60
+     },
+     {
+      "top": 552,
+      "height": 108
+     },
+     {
+      "top": 700,
+      "height": 108
+     },
+     {
+      "top": 932,
+      "height": 108
+     },
+     {
+      "top": 2224,
+      "height": 100
+     },
+     {
+      "top": 2684,
+      "height": 100
+     },
+     {
+      "top": 5680,
+      "height": 104
+     },
+     {
+      "top": 6332,
+      "height": 108
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Katalog digital",
+      "size": 56,
+      "top": 242,
+      "firstScreen": false
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 9
+     },
+     {
+      "x": 150,
+      "n": 4
+     },
+     {
+      "x": 39,
+      "n": 1
+     },
+     {
+      "x": 54,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 15,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "ui-wrapper",
+   "width": 320,
+   "message": "A data-ui element wraps a heading or more than a screen and a half of the page.",
+   "fix": "data-ui marks a cropped interface fragment only. Remove it from page-level wrappers."
+  },
+  {
+   "level": "WARN",
+   "id": "no-hero",
+   "width": 320,
+   "message": "No headline found in the first viewport.",
+   "fix": "The first screen needs a clear focal statement or image."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 320,
+   "message": "The margins differ: 16px on the left, 28px on the right, at 320px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "FAIL",
+   "id": "blank-gap",
+   "width": 320,
+   "message": "7 stretch(es) of the page hold nothing at all: 108px at 552px; 108px at 700px; 108px at 932px; 100px at 2224px (the screen is 200px tall).",
+   "fix": "Close the gap: a section gap is 120–240px on desktop and 72–112px on a phone. Look for a min-height: 100vh on a short section, an empty grid row, a hidden element still holding its space, or a reveal that never fired. A deliberate rest is a placed picture or colour field, not nothing."
+  },
+  {
+   "level": "FAIL",
+   "id": "no-title",
+   "width": 320,
+   "message": "The h1 (\"Katalog digital\") is not on the first screen (it starts 242px down).",
+   "fix": "The title belongs on the first screen, where a visitor decides whether to stay."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "mobile",
+   "width": 320,
+   "fold": "C:\\Projects\\waroengkuy-reseller\\.taste-skill\\inspect-320\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Projects\\waroengkuy-reseller\\.taste-skill\\inspect-320\\mobile-page-01.jpg",
+    "C:\\Projects\\waroengkuy-reseller\\.taste-skill\\inspect-320\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
